@@ -411,8 +411,9 @@ def generate_answer(query, relevant_chunks):
     # Construct the prompt
     prompt = (
         "You are a helpful assistant analyzing a timestamped chat log between people.\n"
+        "In this chat log, the person referred to as 'Me' is Scott, who is now asking you a question.\n" # Added this line
         "Use ONLY the relevant information provided below to answer the following question concisely. Do not add information not present in the log.\n\n"
-        "Provide bullet points with evidence to your answer \n\n"
+        # "Provide bullet points with evidence to your answer. \n\n"
         "=== Relevant Chat Log Snippets ===\n"
         f"{relevant_text}\n\n"
         "=== End of Snippets ===\n\n"
